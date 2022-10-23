@@ -21,6 +21,9 @@ void CanvasImageExample::onUnload()
 }
 
 void CanvasImageExample::RenderCanvas(CanvasWrapper canvas) {
+	LinearColor color = { 255, 255, 255, 255 };
+	canvas.SetColor(color);
+	
 	myImage->LoadForCanvas();
 	if (myImage->IsLoadedForCanvas()) {
 		canvas.SetPosition(Vector2F{ 200.0f, 300.0f });
